@@ -11,7 +11,7 @@ router.get('/', function(req, res){
     .catch(e => res.status(500).jsonp({error: e}))
 })
 
-router.post('/', function(req, res){
+router.post('/register', function(req, res){
   User.inserir(req.body)
     .then(dados => res.status(201).jsonp({dados: dados}))
     .catch(e => res.status(500).jsonp({error: e}))
